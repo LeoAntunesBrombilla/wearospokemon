@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <!-- Use only system certificates -->
+    <base-config cleartextTrafficPermitted="false">
+        <trust-anchors>
+            <certificates src="system" />
+        </trust-anchors>
+    </base-config>
+
+    <!-- Allow these domains -->
+    <domain-config cleartextTrafficPermitted="false">
+        <domain includeSubdomains="true">coinmarketcap.com</domain>
+        <domain includeSubdomains="true">pro-api.coinmarketcap.com</domain>
+    </domain-config>
+</network-security-config>
